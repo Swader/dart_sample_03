@@ -28,7 +28,7 @@ void main() {
 ConnectionPool makeConnection(Map config) {
   ConnectionPool pool = new ConnectionPool(host: config["databaseHost"], port: 3306, user: config["databaseUser"], password: config["databasePassword"], db: config["databaseName"], max: 5);
 
-  pool.query("LIST TABLES").then((results) {
+  pool.query("SHOW TABLES").then((results) {
     results.listen((row) {
       print(row);
     });
