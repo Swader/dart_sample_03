@@ -1,0 +1,5 @@
+name: sample_03
+description: A sample Foundation + Server + MySQL app
+dependencies:
+    http_server: any
+    sqljocky: any
